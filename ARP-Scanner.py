@@ -6,7 +6,7 @@ from time import sleep
 
 command = 'arp -a'
 response = subprocess.check_output(command , shell=True)
-#print(response)
+
 
 response = str(response).split('\\n?')
 
