@@ -29,7 +29,8 @@ def vendor(mac_original):
 
 
 def print_result(results_list):
-    print("IP\t\t\tMAC Address\n-------------------------------------------------------")
+    print("----------------------------------------------------------------------")
+    print("IP\t\t\tMAC Address\t\t\tVENDOR\n----------------------------------------------------------------------")
     for client in results_list:
         vname = str(vendor(client['mac']))
         if vname == "None":
@@ -37,5 +38,4 @@ def print_result(results_list):
 
         print(f"{client['ip']}\t\t{client['mac']}\t\t{vname}")
 
-
-        
+scan('192.168.1.1/24')  
