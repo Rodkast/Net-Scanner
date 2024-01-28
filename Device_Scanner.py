@@ -20,7 +20,7 @@ def scan(ip):
 
 def vendor(mac_original):
     mac_new = mac_original.replace(":", "").upper()
-    with open ("file.txt") as f:
+    with open ("vendor.txt") as f:
         for entry in f.readlines():
             prefix, vendor = entry.split("\t")[0], entry.split("\t")[1].strip()
             if mac_new.startswith(prefix):
